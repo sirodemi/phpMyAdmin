@@ -21,11 +21,30 @@ $.ajax({
 
 
 //送信
-var postData = {"name":"司郎"};
+//var postData = {"name":"司郎"};
+var array = [1,2,3];
+//var aryJSON = JSON.stringify(array);
+//var postData = JSON.stringify(array);
+
+$.ajax({
+	async: true,
+	type: "POST",
+	url: "ajax.php",
+    data: {'product':array},
+    success:function(data){
+        alert(data);
+    }
+});
+
+
+
+/*
 $.post(
      "ajax.php",
-     postData,
+     array,
+ //    postData,
      function(data){
          alert(data); //結果をアラートで表示
      }
 );
+*/
