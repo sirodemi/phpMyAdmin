@@ -21,10 +21,7 @@ $.ajax({
 
 
 //送信
-//var postData = {"name":"司郎"};
 var array = [1,2,3];
-//var aryJSON = JSON.stringify(array);
-//var postData = JSON.stringify(array);
 
 $.ajax({
 	async: true,
@@ -35,16 +32,3 @@ $.ajax({
         alert(data);
     }
 });
-
-
-
-/*
-$.post(
-     "ajax.php",
-     array,
- //    postData,
-     function(data){
-         alert(data); //結果をアラートで表示
-     }
-);
-*/
