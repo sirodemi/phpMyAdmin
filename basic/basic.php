@@ -7,8 +7,10 @@
 </head>
 <body>
 <?php
-    $pdo=new PDO('mysql:host=localhost;dbname=cover;charset=utf8','shiro','sunyou00');
-
+    $pdo=new PDO('mysql:host=localhost;dbname=maintenance;charset=utf8','shiro','sunyou00');
+    foreach ($pdo->query('select * from cover') as $row) {
+        echo "<p>$row[id] : $row[client] : $row[product] : $row[workDate]</p>";
+    }
 ?>
 </body>
 </html>
