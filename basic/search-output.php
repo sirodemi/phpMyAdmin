@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,12 +6,13 @@
 </head>
 <body>
     
-
+<table>
 <?php
     $pdo=new PDO('mysql:host=localhost;dbname=maintenance;charset=utf8','shiro','sunyou00');
-    
-    echo "<table><th>ID</th><th>物件名</th><th>工事名</th><th>作業日</th>";
-    foreach ($pdo->query('select * from cover') as $row) {
+    $sql=$pdo->prepare('select * from cover where client like ?');
+    $sql->execute(['%'.$_REQUEST['keyword'].'%']);
+//    $sql->execute();
+    foreach($sql as $row){
     //    echo "<p>$row[id] : $row[client] : $row[product] : $row[workDate]</p>";
         echo "<tr>";
         echo "<td>$row[id]</td>";
@@ -26,4 +26,3 @@
 ?>
 </body>
 </html>
-
