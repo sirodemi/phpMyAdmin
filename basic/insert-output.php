@@ -14,8 +14,6 @@
     }else{
         echo 'error?';
     }
-    
-
 ?>
 </body>
 </html>
