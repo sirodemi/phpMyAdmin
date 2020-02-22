@@ -13,50 +13,10 @@
 </head>
 
 <body>
-    <div id="example-table"></div>
+    <script src="./basic.js"></script>
     <script>
 
-        var tableData = makeData();
-        makeTable(tableData);
 
-        function makeTable(tableData){
-            $(function(){
-                var table = new Tabulator("#example-table", {
-                    data:tableData,           //load row data from array
-                    layout:"fitColumns",      //fit columns to width of table
-                    responsiveLayout:"hide",  //hide columns that dont fit on the table
-                    tooltips:true,            //show tool tips on cells
-                    addRowPos:"top",          //when adding a new row, add it to the top of the table
-                    history:true,             //allow undo and redo actions on the table
-                    pagination:"local",       //paginate the data
-                    paginationSize:7,         //allow 7 rows per page of data
-                    movableColumns:true,      //allow column order to be changed
-                    resizableRows:true,       //allow row order to be changed
-                    dataEdited:function(data){
-                        registData(data);
-                    },
-                    columns:[                 //define the table columns
-                        {title:"Name", field:"name", editor:"input"},
-                        {title:"Driver", field:"car", formatter:"tickCross", editor:true},
-                    ],
-                });
-            });
-        }
-
-        function makeData(){
-            var tableData = [
-                {name:"Oli Bob", car:1},
-                {name:"Mary May", car:true},
-                {name:"Christine Lobowski", car:true},
-                {name:"Brendon Philips", car:true},
-                {name:"Margret Marmajuke", car:true},
-            ];
-            return tableData;
-        }
-
-        function registData(data){
-            console.log(data);
-        }
 
     </script>
 </body>
