@@ -1,15 +1,15 @@
 <?php
-require_once("util.php");
+//require_once("util.php");
 
-$name = $_POST['name'];
+//$name = $_POST['name'];
 
-echo 'test';
+//echo 'test';
 
 // データベースユーザ
 $user = 'shiro';
 $password = 'sunyou00';
 // 利用するデータベース
-$dbName = 'maintenance';
+$dbName = 'sunyou_maintenance_system';
 // MySQLサーバ
 $host = 'localhost';
 // MySQLのDSN文字列
